@@ -56,7 +56,7 @@ extension BigInt {
 }
 
 extension BigUInt {
-    func abiEncode(bits: UInt64) -> Data? {
+    public func abiEncode(bits: UInt64) -> Data? {
         let data = self.serialize()
         let paddedLength = UInt64(ceil((Double(bits)/8.0)))
         let padded = data.setLengthLeft(paddedLength)
